@@ -135,7 +135,7 @@ class DetectronCheckpointer(Checkpointer):
         # load native detectron.pytorch checkpoint
         print(f)
         loaded = super(DetectronCheckpointer, self)._load_file(f)
-        for name, param in model.named_parameters():
+        for name, param in loaded.named_parameters():
             print(name)
         exit()
         if "model" not in loaded:
