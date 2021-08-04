@@ -2,7 +2,8 @@
 MODEL:
   META_ARCHITECTURE: "GeneralizedRCNN"
 #  WEIGHT: "catalog://ImageNetPretrained/MSRA/R-50"
-  WEIGHT: "weights/cutrot_load_0.10/model_best.pth"
+#  WEIGHT: "weights/cutrot_load_0.10/model_best.pth"
+  WEIGHT: "weights/gr_ResNet50_0.10/model_best.pth"
   RPN_ONLY: True
   FCOS_ON: True
   BACKBONE:
