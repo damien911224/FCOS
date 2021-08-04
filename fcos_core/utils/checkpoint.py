@@ -133,7 +133,9 @@ class DetectronCheckpointer(Checkpointer):
         if f.endswith(".pkl"):
             return load_c2_format(self.cfg, f)
         # load native detectron.pytorch checkpoint
+        print(f)
         loaded = super(DetectronCheckpointer, self)._load_file(f)
         if "model" not in loaded:
             loaded = dict(model=loaded)
+            print("not loaded")
         return loaded
