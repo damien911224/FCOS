@@ -138,7 +138,7 @@ class DetectronCheckpointer(Checkpointer):
         if "model" not in loaded:
             loaded = dict(model=loaded)
             print("not loaded")
-            for name, param in loaded.items():
+            for name, param in loaded['model'].items():
                 print(name)
             exit()
         return loaded
