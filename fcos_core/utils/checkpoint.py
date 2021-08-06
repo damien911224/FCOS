@@ -66,7 +66,6 @@ class Checkpointer(object):
         if "scheduler" in checkpoint and self.scheduler:
             self.logger.info("Loading scheduler from {}".format(f))
             self.scheduler.load_state_dict(checkpoint.pop("scheduler"))
-        exit()
         # return any further checkpoint data
         return checkpoint
 
